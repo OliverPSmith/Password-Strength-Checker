@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Password Strength Checker</title>
+</head>
+<body>
+    <div id="title">
+        <h3>Password Checker</h3>
+        <h5>Test out your password strength below</h5>
+    </div>
+
+    <div class="container">
+        <form>
+            <div>
+                <input type="password" id="pword" name="pword" pattern="(?=.*\d)(?=.*[a-z](?.*[A-Z]).{6,}"
+                title="must contain one number, one lowercase, one uppercase and min 8 letters in total" placeholder="Try Me" required>
+                <i class="far fa-eye" id="toggle-password"></i>
+            </div>
+            <div id="complete-bar">
+                <div class="complete-quarter" id="first-quarter"></div>
+                <div class="complete-quarter" id="second-quarter"></div>
+                <div class="complete-quarter" id="third-quarter"></div>
+                <div class="complete-quarter" id="fourth-quarter"></div>
+            </div>
+            <button id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <div id="check-list">
+        <h4>Password must have:</h4>
+        <p id="lower" class="invalid">a <i>lowercase</i> letter</p>
+        <p id="upper" class="invalid">an <i>uppercase</i> letter</p>
+        <p id="number" class="invalid">a <i>number</i></p>
+        <p id="length" class="invalid">a minimum of <i>6</i>  letters</p>
+    </div>
+
+
+
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
